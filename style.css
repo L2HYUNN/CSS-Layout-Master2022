@@ -1,21 +1,29 @@
 .father {
   display: flex;
   /* Main Axis */
-  justify-content: space-evenly;
   /* Cross Axis */
+  justify-content: space-around;
+
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: space-around;
+
   height: 100vh;
 }
 
 .child {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   background-color: peru;
   color: white;
   font-size: 50px;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.child:nth-child(3) {
+/* .child:nth-child(3) {
   align-self: flex-end;
   order: 1;
 }
@@ -23,4 +31,4 @@
 .child:nth-child(2) {
   align-self: center;
   order: 2;
-}
+} */
