@@ -9,6 +9,7 @@
 
 .child {
   width: 400px;
+  flex-basis: 300px;
   height: 400px;
   background-color: peru;
   color: white;
