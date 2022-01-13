@@ -1,17 +1,26 @@
-.wrapper {
+.father {
   display: flex;
   /* Main Axis */
   justify-content: space-evenly;
   /* Cross Axis */
-  align-items: center;
   height: 100vh;
 }
 
-.box {
+.child {
   width: 200px;
   height: 200px;
   background-color: peru;
   color: white;
   font-size: 50px;
   text-align: center;
+}
+
+.child:nth-child(3) {
+  align-self: flex-end;
+  order: 1;
+}
+
+.child:nth-child(2) {
+  align-self: center;
+  order: 2;
 }
