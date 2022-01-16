@@ -1,8 +1,16 @@
 @import "_variables";
+@import "_mixins";
 
 body {
   background: white;
-  h1 {
-    color: $bg;
+  a {
+    font-size: 100px;
+    margin-bottom: 20px;
+    &:nth-child(even) {
+      @include addTitle(even);
+    }
+    &:nth-child(odd) {
+      @include addTitle(odd);
+    }
   }
 }

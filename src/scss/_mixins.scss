@@ -1,0 +1,9 @@
+@mixin addTitle($word) {
+  @if $word == "odd" {
+    color: blue;
+  } @else {
+    color: red;
+  }
+  display: block;
+  text-decoration: none;
+}
