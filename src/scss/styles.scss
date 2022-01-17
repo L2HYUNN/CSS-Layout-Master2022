@@ -1,16 +1,11 @@
-@import "_variables";
-@import "_mixins";
+@import "_buttons";
 
-body {
-  background: white;
-  a {
-    font-size: 100px;
-    margin-bottom: 20px;
-    &:nth-child(even) {
-      @include addTitle(even);
-    }
-    &:nth-child(odd) {
-      @include addTitle(odd);
-    }
-  }
+a {
+  @extend %button;
+  text-decoration: none;
+}
+
+button {
+  @extend %button;
+  border: none;
 }
