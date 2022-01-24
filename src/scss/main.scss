@@ -1,0 +1,211 @@
+@import "_mixins";
+@import "_variables";
+
+main {
+  font-family: RingsideRegularSSm-Book, Blank, Helvetica Neue, Helvetica,
+    sans-serif;
+  background-color: $signatureColor;
+  @include screenSize("normal") {
+    width: 100%;
+    padding-left: 420px;
+  }
+  @include screenSize("wide") {
+    width: 100%;
+    padding-left: 600px;
+  }
+  height: 100%;
+
+  article {
+    width: 100%;
+
+    &:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background-color: $signatureColor;
+      opacity: 0.95;
+
+      @include screenSize("superNarrow") {
+        padding: 36px 48px;
+      }
+      @include screenSize("narrow") {
+        padding: 42px 72px;
+      }
+      @include screenSize("normal") {
+        padding: 60px 48px;
+      }
+      @include screenSize("wide") {
+        padding: 60px 72px;
+      }
+
+      p {
+        color: white;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        text-align: center;
+      }
+      a {
+        color: $signatureColor2;
+        text-decoration: none;
+        padding-bottom: 1px;
+        font-weight: 500;
+        border-bottom: 1px solid $signatureColor2;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.08), transparent);
+
+    @include screenSize("superNarrow") {
+      font-size: 1.5rem;
+      padding: 54px 48px;
+    }
+    @include screenSize("narrow") {
+      font-size: 1.5rem;
+      padding: 72px;
+    }
+    @include screenSize("normal") {
+      font-size: 1.5rem;
+      padding: 54px 48px;
+    }
+    @include screenSize("wide") {
+      font-size: 1.6rem;
+      padding: 72px;
+    }
+
+    header {
+      background-color: inherit;
+      color: inherit;
+      width: 100%;
+      @include screenSize("superNarrow") {
+        padding-bottom: 24px;
+      }
+      @include screenSize("narrow") {
+        padding-bottom: 24px;
+      }
+      @include screenSize("normal") {
+        position: relative;
+        padding-bottom: 24px;
+      }
+      @include screenSize("wide") {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        // flex-wrap: wrap;
+        padding-bottom: 36px;
+      }
+      h2 {
+        @include screenSize("superNarrow") {
+          font-size: 4.4rem;
+        }
+        @include screenSize("narrow") {
+          font-size: 5rem;
+        }
+        @include screenSize("normal") {
+          font-size: 5.2rem;
+          transform: translate3d(0.07em, 0, 0);
+        }
+        @include screenSize("wide") {
+          font-size: 6rem;
+        }
+        font-feature-settings: "tnum" 1;
+        line-height: 0.9;
+        padding-right: 1em;
+        transform: translate3d(-0.07em, 0, 0);
+      }
+      p {
+        @include screenSize("superNarrow") {
+          padding-top: 1em;
+        }
+        @include screenSize("narrow") {
+          padding-top: 1em;
+        }
+        @include screenSize("normal") {
+          padding-top: 1em;
+        }
+        @include screenSize("normal") {
+          font-size: 1.4rem;
+          white-space: nowrap;
+          text-align: right;
+        }
+        font-size: 1.3rem;
+        line-height: 1.2;
+        transform: translateY(-0.1em);
+      }
+    }
+    img {
+      box-shadow: 0 80px 80px -80px #2d0806;
+    }
+    div {
+      color: $signatureColor2;
+
+      p {
+        &:first-child {
+          @include screenSize("superNarrow") {
+            padding: 48px 0 0 0;
+          }
+          @include screenSize("narrow") {
+            padding: 48px 0 0 0;
+          }
+          @include screenSize("normal") {
+            padding: 48px 0 0 0;
+          }
+          @include screenSize("wide") {
+            padding: 48px 0 0 0;
+          }
+          text-align: right;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+      div {
+        @include screenSize("superNarrow") {
+          margin-left: -48px;
+          margin-right: -48px;
+          padding: 0 48px 0.5em;
+        }
+        @include screenSize("narrow") {
+          margin-left: -72px;
+          margin-right: -72px;
+          padding: 0 72px 0.5em;
+        }
+        @include screenSize("normal") {
+          margin-left: -72px;
+          margin-right: -72px;
+          padding: 0 72px 0.5em;
+        }
+        @include screenSize("wide") {
+          margin-left: -72px;
+          margin-right: -72px;
+          padding: 0 72px 0.5em;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4em;
+
+        p {
+          padding: none;
+        }
+        button {
+          font-weight: 500;
+          border: none;
+          background-color: rgba(0, 0, 0, 0);
+          color: $signatureColor2;
+          border-bottom: 1px solid $signatureColor2;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}

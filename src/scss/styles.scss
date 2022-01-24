@@ -1,23 +1,34 @@
+/* SCSS Tool */
 @import "_mixins";
+@import "_variables";
+@import "reset";
+/* SCSS File */
+@import "header";
+@import "main";
 
-h1 {
-  color: red;
-  @include responsive("iphone") {
-    color: yellow;
-  }
-  @include responsive("iphone-l") {
-    font-size: 60px;
-  }
-  @include responsive("tablet") {
-    color: green;
-  }
-  @include responsive("tablet-l") {
-    font-size: 60px;
-  }
+* {
+  box-sizing: border-box;
 }
-@include responsive("iphone") {
-  color: yellow;
+
+html {
+  font-size: 10px;
 }
-@include responsive("iphone-l") {
-  font-size: 60px;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #e7473c;
+  font-family: Univers, Helvetica Neue, Helvetica, Myriad Pro, Myriad, Geneva,
+    Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+  justify-content: space-around;
+
+  @include screenSize("narrow") {
+    flex-direction: column;
+  }
+  @include screenSize("superNarrow") {
+    flex-direction: column;
+  }
 }

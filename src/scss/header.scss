@@ -1,0 +1,143 @@
+@import "_mixins";
+@import "_variables";
+
+header {
+  font-family: RingsideExtraWide-Book, Blank, Helvetica Neue, Helvetica,
+    sans-serif;
+  letter-spacing: 1px;
+  background-color: #f0f0f0;
+  color: $signatureColor;
+  position: relative;
+  height: 100%;
+  overflow: scroll;
+
+  @include screenSize("normal") {
+    width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  @include screenSize("wide") {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  hgroup {
+    height: 100%;
+    @include screenSize("superNarrow") {
+      padding: 10vh 0 0 36px;
+    }
+    @include screenSize("narrow") {
+      padding: 10vh 0 0 72px;
+    }
+    @include screenSize("normal") {
+      padding: 10vh 0 0 72px;
+    }
+    @include screenSize("wide") {
+      padding: 10vh 0 0 72px;
+    }
+
+    h1 {
+      @include screenSize("superNarrow") {
+        font-size: 5rem;
+      }
+      @include screenSize("narrow") {
+        font-size: 7.2rem;
+      }
+      @include screenSize("normal") {
+        font-size: 5rem;
+      }
+      @include screenSize("wide") {
+        font-size: 7.2rem;
+      }
+      // text-align: justify;
+      transform: translateX(-0.1em);
+      letter-spacing: 12px;
+    }
+  }
+
+  div {
+    width: 100%;
+    @include screenSize("superNarrow") {
+      padding: 36px;
+    }
+    @include screenSize("narrow") {
+      padding: 72px;
+    }
+    @include screenSize("normal") {
+      padding: 72px;
+    }
+    @include screenSize("wide") {
+      padding: 72px;
+    }
+    font-size: 1.5rem;
+    line-height: 1.4;
+    article {
+      @include screenSize("wide") {
+        width: 80%;
+        max-width: 480px;
+      }
+      p {
+        margin-bottom: 1em;
+        line-height: 1.2;
+
+        &:first-child {
+          font-size: 1.5em;
+        }
+
+        &:last-child {
+          line-height: 1.4;
+          text-indent: -0.5em;
+          text-align: justify;
+        }
+      }
+    }
+
+    nav {
+      @include screenSize("wide") {
+        width: 80%;
+        max-width: 480px;
+      }
+      ul {
+        margin-bottom: 2em;
+        line-height: 1.7;
+        font-size: 0.9em;
+        margin-top: 2em;
+
+        li {
+          display: inline-block;
+          margin-bottom: 0.25em;
+          margin-right: 1em;
+
+          a {
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+
+    footer {
+      @include screenSize("wide") {
+        width: 80%;
+        max-width: 480px;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

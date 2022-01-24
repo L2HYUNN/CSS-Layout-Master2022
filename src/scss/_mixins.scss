@@ -1,23 +1,22 @@
-$minIphone: 500px;
-$maxIphone: 690px;
-$minTablet: $minIphone + 1;
-$maxTablet: 1120px;
-
-@mixin responsive($device) {
-  @if $device == "iphone" {
-    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+@mixin screenSize($mode) {
+  @if $mode == "superWide" {
+    @media screen and (min-width: 1610px) {
       @content;
     }
-  } @else if $device == "tablet" {
-    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+  } @else if $mode == "wide" {
+    @media screen and (min-width: 1200px) and (max-width: 1609px) {
       @content;
     }
-  } @else if $device == "iphone-l" {
-    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+  } @else if $mode == "normal" {
+    @media screen and (min-width: 840px) and (max-width: 1199px) {
       @content;
     }
-  } @else if $device == "ipad-l" {
-    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+  } @else if $mode == "narrow" {
+    @media screen and (min-width: 600px) and (max-width: 839px) {
+      @content;
+    }
+  } @else if $mode == "superNarrow" {
+    @media screen and (min-width: 0px) and (max-width: 599px) {
       @content;
     }
   }
