@@ -1,8 +1,135 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+  height: 3.5vh;
+  background-color: #bdbec0;
+}
+
+.main {
+  width: 80%;
+  height: 85%;
+}
+.circle__container {
+  display: flex;
+  align-items: center;
+  width: 33%;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+}
+
+.box__main {
+  width: 33%;
+  height: 2vh;
+  border-radius: 0.5vh;
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  padding: 0 50px;
+  box-sizing: content-box;
+}
+
+.box__empty {
+  width: 33%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "block-black block-purple list-speakers list-artists"
+    "block-red block-white list-speakers list-artists"
+    "block-red block-yellow list-speakers list-artists";
+}
+
+.main__block--black {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  letter-spacing: 2px;
+  grid-area: block-black;
+}
+.block__text--reverse {
+  display: flex;
+  transform: rotateX(180deg);
+}
+.main__block--purple {
+  background-color: #6b01ff;
+  grid-area: block-purple;
+}
+.main__block--red {
+  background-color: red;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 10px;
+  grid-area: block-red;
+}
+.main__block--white {
+  background-color: white;
+  grid-area: block-white;
+}
+.main__block--yellow {
+  background-color: #ffc906;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  padding: 10px;
+  grid-area: block-yellow;
+}
+.main__list--speakers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  grid-area: list-speakers;
+}
+.main__list--artists {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  grid-area: list-artists;
+}
+.list__text--title {
+  margin-bottom: 10px;
+  font-size: 6px;
+  font-weight: 500;
+}
+.list__text {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
 }
