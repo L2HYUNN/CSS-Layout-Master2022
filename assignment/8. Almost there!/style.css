@@ -1,0 +1,198 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.paper {
+  display: flex;
+  height: 100vh;
+}
+.nav-left {
+  width: 60%;
+  background-color: #ff7400;
+  padding: 10px;
+}
+.nav-left__contents {
+  overflow: scroll;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr;
+  grid-auto-rows: 80px;
+  border: 5px solid #ff0500;
+  gap: 5px;
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #ff0500;
+  white-space: nowrap;
+}
+.nav-left__content--chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotateZ(180deg);
+  background-color: #ff7400;
+  grid-row: span 2;
+  transition: color 1s linear;
+}
+.nav-left__content--chart:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav-left__content--title {
+  display: flex;
+  align-items: center;
+  font-size: 70px;
+  background-color: #ff7400;
+  grid-row: span 2;
+  padding: 5px;
+  transition: color 1s linear;
+}
+.nav-left__content--title:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav-left__content--text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ff7400;
+  overflow: scroll;
+  transition: color 1s linear;
+}
+.nav-left__content--text:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav-left__content--year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7400;
+  overflow: scroll;
+  transition: color 1s linear;
+}
+.nav-left__content--year:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav-left__content--year-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff7400;
+  background-color: #ff0500;
+  padding: 10px;
+  width: 200px;
+  border-radius: 30px;
+  font-size: 15px;
+  transition: background-color 1s linear;
+}
+.nav-left__content--year-container:hover {
+  background-color: white;
+  cursor: pointer;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nav-center {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 5%;
+}
+.nav-center__first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50%;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #ff00ff;
+}
+.nav-center__center {
+  white-space: nowrap;
+  overflow: scroll;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav-center__center i:hover {
+  animation: 3s linear infinite rotate;
+}
+
+.nav-center__last {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50%;
+  padding: 20px;
+  background-color: blue;
+  font-size: 30px;
+  font-weight: 600;
+  transform: rotateZ(180deg);
+  z-index: -1;
+}
+.nav-right {
+  width: 35%;
+  background-color: red;
+  padding: 15px;
+  overflow-y: scroll;
+}
+.nav-right__header--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.nav-right__header--container li {
+  display: flex;
+  transition: color 1s linear;
+}
+.nav-right__header--container li:hover {
+  color: white;
+}
+.nav-right__header--text {
+  margin-left: 5px;
+}
+.nav-right__main {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.nav-right__main--contents {
+  border-top: 2px solid black;
+  transition: all 1s linear;
+}
+.nav-right__main--contents:hover {
+  border-top: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+.nav-right__main--content-title {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
